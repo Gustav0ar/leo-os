@@ -30,7 +30,8 @@ modules:
         - nfs-utils
         - vim
         - libcapstone
-        - qemu qemu-user-static
+        - qemu
+        - qemu-user-static
         - mkvtoolnix
         - mkvtoolnix-gui
         - subtitleeditor
