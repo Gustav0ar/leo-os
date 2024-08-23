@@ -4,7 +4,7 @@ name: leo-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/aurora-dx
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -21,6 +21,26 @@ modules:
     install:
       # - micro
       # - starship
+        - zsh
+        - git
+        - openconnect
+        - NetworkManager-openconnect
+        - NetworkManager-openvpn
+        - NetworkManager-fortisslvpn
+        - nfs-utils
+        - vim
+        - libcapstone
+        - qemu qemu-user-static
+        - mkvtoolnix
+        - mkvtoolnix-gui
+        - subtitleeditor
+        - python3-tkinter
+        - python3-fuzzywuzzy
+        - fira-code-fonts
+        - samba
+        - ddcutil
+        
+        
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -35,6 +55,24 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        - com.bitwarden.desktop
+        - com.brave.Browser
+        - com.calibre_ebook.calibre
+        - com.discordapp.Discord
+        - com.getpostman.Postman
+        - com.github.muriloventuroso.easyssh
+        - com.github.phase1geo.minder
+        - com.github.tchx84.Flatseal
+        - info.smplayer.SMPlayer
+        - io.github.dvlv.boxbuddyrs
+        - net.poedit.Poedit
+        - org.freedesktop.Piper
+        - org.gnome.meld
+        - org.mozilla.Thunderbird
+        - org.telegram.desktop
+        - studio.kx.carla
+        - us.zoom.Zoom
+        
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
